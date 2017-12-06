@@ -6,7 +6,7 @@ Active Directory Authentication Library for JavaScript (ADAL JS) helps you to us
 This library is optimized for working together with AngularJS.
 
 ## Versions
-Current version - 1.0.14  
+Current version - 1.0.15  
 Minimum recommended version - 1.0.11  
 You can find the changes for each version in the [change log](https://github.com/AzureAD/azure-activedirectory-library-for-js/blob/master/changelog.txt).
 
@@ -27,7 +27,7 @@ If you find a security issue with our libraries or services please report it to 
 
 ## The Library
 
-This is a GA released version. The current version is **1.0.14**.
+This is a GA released version. The current version is **1.0.15**.
 
 You have multiple ways of getting ADAL JS:
 
@@ -38,10 +38,10 @@ Via NPM:
 Via CDN:
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.14/js/adal.min.js"></script>
-    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.14/js/adal-angular.min.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal-angular.min.js"></script>
 
-CDN will be updated to latest version 1.0.14.
+CDN will be updated to latest version 1.0.15.
 
 Via Bower:
 
@@ -157,7 +157,7 @@ Anonymous endpoints, introduced in version 1.0.10, is an array of values that wi
 
 ***Optional***
 7- If you so choose, in addition (or substitution) to route level protection you can add explicit login/logout UX elements. Furthermore, you can access properties of the currently signed in user directly form JavaScript (via userInfo and userInfo.profile).
-The userInfo.profile property provides access to the claims in the ID token received from AAD. The claims can be used by the application for validation, to identify the subject's directory tenant, and so on. The complete list of claims with a brief description of each value is here, [Claims in Azure AD Security Tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios%23claims-in-azure-ad-security-tokens):
+The userInfo.profile property provides access to the claims in the ID token received from AAD. The claims can be used by the application for validation, to identify the subject's directory tenant, and so on. The complete list of claims with a brief description of each value is here, [Claims in Azure AD Security Tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios):
 ```html
 <!DOCTYPE html>
 <html>
@@ -300,6 +300,9 @@ http://www.cloudidentity.com/blog/2014/10/28/adal-javascript-and-angularjs-deep-
 
 ### Trusted Site settings in IE
 If you put your site in the trusted site list, cookies are not accessible for iFrame requests. You need to remove protected mode for Internet zone or add the authority url for the login to the trusted sites as well.
+
+### Known issues on Edge
+Certain issues have been reported when using ADAL.js with the Microsoft Edge version 40.15063.0.0. Please take a look at [this page](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) for details and work arounds before filing a new issue.
 
 ## We Value and Adhere to the Microsoft Open Source Code of Conduct
 
